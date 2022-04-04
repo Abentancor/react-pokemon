@@ -49,7 +49,7 @@ const App = () => {
       fetchPokemons()
     }
   }, [page])
-
+///////////////////////////////////////
   const updateFavoritePokemons= (name) =>{
     const updated = [...favorites]
     const isFavorite = favorites.indexOf(name)
@@ -61,7 +61,7 @@ const App = () => {
     setFavorites(updated);
     window.localStorage.setItem(localStorageKey, JSON.stringify(updated))
   }
-
+///////////////////////////////////////
   const onSearch = async(pokemon)=>{
     setLoading(true)
     const result = await searchPokemon(pokemon)
